@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsOptimizationTool", "WindowsOptimizationTool\WindowsOptimizationTool.csproj", "{05F42308-7A98-426C-8AFA-27BE9BC124AD}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "W.O.T", "W.O.T\W.O.T.vdproj", "{DFE62ADD-690E-4301-87C0-D46F0FB87F21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05F42308-7A98-426C-8AFA-27BE9BC124AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05F42308-7A98-426C-8AFA-27BE9BC124AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F42308-7A98-426C-8AFA-27BE9BC124AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05F42308-7A98-426C-8AFA-27BE9BC124AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFE62ADD-690E-4301-87C0-D46F0FB87F21}.Debug|Any CPU.ActiveCfg = Debug
+		{DFE62ADD-690E-4301-87C0-D46F0FB87F21}.Debug|Any CPU.Build.0 = Debug
+		{DFE62ADD-690E-4301-87C0-D46F0FB87F21}.Release|Any CPU.ActiveCfg = Release
+		{DFE62ADD-690E-4301-87C0-D46F0FB87F21}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A9C111E-5A18-489B-936D-764FDE2CBF2B}
+	EndGlobalSection
+EndGlobal

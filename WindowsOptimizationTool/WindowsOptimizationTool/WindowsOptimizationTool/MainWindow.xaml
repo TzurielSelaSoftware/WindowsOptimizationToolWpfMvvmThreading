@@ -1,0 +1,69 @@
+﻿<Window x:Class="WindowsOptimizationTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:WindowsOptimizationTool.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStyle="None" BorderThickness="0" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="Images\2.jpg" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" Grid.RowSpan="12" Opacity="0.4" Stretch="Fill" />
+
+        <ComboBox IsReadOnly="True" IsEditable="True" Text="..." IsSynchronizedWithCurrentItem="True"  Grid.Column="6" Margin="-20,0,0,0" Grid.Row="0"  SelectedIndex="{Binding SelectedValue}" Background="WhiteSmoke" Opacity="0.7">
+            <ComboBoxItem Background="WhiteSmoke" Opacity="0.7">Exit</ComboBoxItem>
+            <ComboBoxItem Background="WhiteSmoke" Opacity="0.7">About</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" Text="{Binding SpaceInfo}" FontSize="11"/>
+
+        <Label Content="Remove trash" Grid.Column="1" Grid.Row="1" FontSize="18" FontFamily="Tempus Sans ITC" FontWeight="Bold" Margin="5,0,0,0" />
+        <Label Content="Freeing storage" Grid.Column="3" Grid.Row="1" FontSize="18" FontFamily="Tempus Sans ITC" FontWeight="Bold" Margin="5,0,0,0" />
+        <Label Content="User preferences" Grid.Column="5" Grid.Row="1" FontSize="18" FontFamily="Tempus Sans ITC" FontWeight="Bold" Margin="5,0,0,0" />
+
+
+        <Button IsEnabled="{Binding IsEnabled}" Content="Empty Temp-Folder" ToolTip="Clean up all unnecessary temp files" Grid.Column="1" Grid.Row="2"  Margin="7,7,7,7" Background="WhiteSmoke" Opacity="0.7" Command="{Binding EmptyTempFolder}"/>
+        <Button IsEnabled="{Binding IsEnabled}" Content="Remove Empty-Folders" ToolTip="Remove empty folders from drive C" Grid.Column="1" Grid.Row="3"  Margin="7,7,7,7" Background="WhiteSmoke" Opacity="0.7" Command="{Binding RemoveEmptyFolders}"/>
+        <Button IsEnabled="{Binding IsEnabled}" Content="Activate Disk-Cleanup" ToolTip="Windows disk clean-up" Grid.Column="1" Grid.Row="4"  Margin="7,7,7,7" Background="WhiteSmoke" Opacity="0.7" Command="{Binding CleanUp}"/>
+
+        <Button IsEnabled="{Binding IsEnabled}" Content="Disable Hibernation" ToolTip="Disable pc Hibernation - save 7GB of storage" Grid.Column="3" Grid.Row="2"  Margin="7,7,7,7" Background="WhiteSmoke" Opacity="0.7"  Command="{Binding CmdCommand}"/>
+        <Button IsEnabled="{Binding IsEnabled}" Content="Disable Restore-Point" ToolTip="Save space on you HDD" Grid.Column="3" Grid.Row="3"  Margin="7,7,7,7" Background="WhiteSmoke" Opacity="0.7" Command="{Binding RestorePoine}"/>
+        <Button IsEnabled="{Binding IsEnabled}" Content="Disable Indexing" ToolTip="Increase performance" Grid.Column="3" Grid.Row="4"  Margin="7,7,7,7" Background="WhiteSmoke" Opacity="0.7" Command="{Binding Index}"/>
+
+        <Button IsEnabled="{Binding IsEnabled}" Content="Turn off UAC" ToolTip="User-account-control" Grid.Column="5" Grid.Row="2"  Margin="7,7,7,7" Background="WhiteSmoke" Opacity="0.7" Command="{Binding UAC}"/>
+        <Button IsEnabled="{Binding IsEnabled}" Content="Disable visual effects" ToolTip="Increase performance" Grid.Column="5" Grid.Row="3"  Margin="7,7,7,7" Background="WhiteSmoke" Opacity="0.7" Command="{Binding Visual}"/>
+        <Button IsEnabled="{Binding IsEnabled}" Content="Disable WD" ToolTip="Windows Defender" Grid.Column="5" Grid.Row="4"  Margin="7,7,7,7" Background="WhiteSmoke" Opacity="0.7" Command="{Binding WD}"/>
+
+        <ListView ItemsSource="{Binding ConsoleData}" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5" Grid.RowSpan="4" Foreground="White" Background="#FF000128" Opacity="0.8"/>
+
+        <ProgressBar Grid.Column="1" Grid.Row="10" Minimum="0" Maximum="{Binding ProgBarLength}" Grid.ColumnSpan="5" Value="{Binding ProgBarValue}" Background="White" Margin="0,7,0,7" Opacity="0.7"/>
+ 
+    </Grid>
+</Window>
