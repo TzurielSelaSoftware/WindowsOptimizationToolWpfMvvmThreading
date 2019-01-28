@@ -132,7 +132,7 @@ namespace WindowsOptimizationTool.ViewModels
                     foreach (var file in files)
                     {
                         y++;
-                        if (file != @"C:\Users\Tzuriel\AppData\Local\Temp\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs")
+                        if (file != $@"C:\Users\{Environment.UserName}\AppData\Local\Temp\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs")
                         {
                             try
                             {
