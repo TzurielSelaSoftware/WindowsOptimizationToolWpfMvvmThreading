@@ -100,7 +100,7 @@ namespace WindowsOptimizationTool.ViewModels
         #region Constructor 
         public MainViewModel()
         {
-            SpaceInfo = @"Drive C:\" + "\nTotal size - " + DI.TotalSize + " Bytes , Free space - " + DI.AvailableFreeSpace + " Bytes";
+            SpaceInfo = @"Drive C:\" + $"\nTotal size - { DI.TotalSize } Bytes , Free space - { DI.AvailableFreeSpace } Bytes";
             progBarLength = 100;
             progBarValue = 0;
             IsEnabled = true;
@@ -154,7 +154,7 @@ namespace WindowsOptimizationTool.ViewModels
                             }
                         }
                     }
-                    SpaceInfo = @"Drive C:\" + "\nTotal size - " + DI.TotalSize + " Bytes , Free space - " + DI.AvailableFreeSpace + " Bytes";
+                    SpaceInfo = @"Drive C:\" + $"\nTotal size - {  DI.TotalSize } Bytes , Free space - {DI.AvailableFreeSpace } Bytes";
                     for (int i = 0; i < subDir.Length; i++)
                     {
                         y++;
@@ -178,7 +178,7 @@ namespace WindowsOptimizationTool.ViewModels
                         }
                     }
                 });
-                SpaceInfo = @"Drive C:\" + "\nTotal size - " + DI.TotalSize + " Bytes , Free space - " + DI.AvailableFreeSpace + " Bytes";
+                SpaceInfo = @"Drive C:\" + $"\nTotal size - { DI.TotalSize } Bytes , Free space - { DI.AvailableFreeSpace } Bytes";
                 ConsoleData.Add($"\nTotal {countFiles} files and {countDirectories} directory deleted.");
                 IsEnabled = true;
             }
@@ -232,7 +232,7 @@ namespace WindowsOptimizationTool.ViewModels
                     }
                 });
                 ProgBarValue = ProgBarLength;
-                SpaceInfo = @"Drive C:\" + "\nTotal size - " + DI.TotalSize + " Bytes , Free space - " + DI.AvailableFreeSpace + " Bytes";
+                SpaceInfo = @"Drive C:\" + $"\nTotal size - { DI.TotalSize } Bytes , Free space - { DI.AvailableFreeSpace } Bytes";
                 ConsoleData.Add($"\nTotal {count} directory deleted.");
                 IsEnabled = true;
             }
@@ -251,7 +251,7 @@ namespace WindowsOptimizationTool.ViewModels
                 await Task.Run(() =>
                 {
                     Thread.Sleep(90000);
-                    SpaceInfo = @"Drive C:\" + "\nTotal size - " + DI.TotalSize + " Bytes , Free space - " + DI.AvailableFreeSpace + " Bytes";
+                    SpaceInfo = @"Drive C:\" + $"\nTotal size - { DI.TotalSize } Bytes , Free space - { DI.AvailableFreeSpace } Bytes";
                 });
             }
             catch (Exception)
@@ -276,7 +276,7 @@ namespace WindowsOptimizationTool.ViewModels
                 IsEnabled = true;
                 Thread.Sleep(100);
                 ProgBarValue = 1;
-                SpaceInfo = @"Drive C:\" + "\nTotal size - " + DI.TotalSize + " Bytes , Free space - " + DI.AvailableFreeSpace + " Bytes";
+                SpaceInfo = @"Drive C:\" + $"\nTotal size - { DI.TotalSize } Bytes , Free space - { DI.AvailableFreeSpace } Bytes";
             }
             catch (Exception)
             {
@@ -299,7 +299,7 @@ namespace WindowsOptimizationTool.ViewModels
                 Thread.Sleep(100);
                 ProgBarValue = 1;
                 IsEnabled = true;
-                SpaceInfo = @"Drive C:\" + "\nTotal size - " + DI.TotalSize + " Bytes , Free space - " + DI.AvailableFreeSpace + " Bytes";
+                SpaceInfo = @"Drive C:\" + $"\nTotal size - { DI.TotalSize } Bytes , Free space - { DI.AvailableFreeSpace } Bytes";
             }
             catch (Exception)
             {
@@ -321,7 +321,7 @@ namespace WindowsOptimizationTool.ViewModels
                 IsEnabled = true;
                 Thread.Sleep(100);
                 ProgBarValue = 1;
-                SpaceInfo = @"Drive C:\" + "\nTotal size - " + DI.TotalSize + " Bytes , Free space - " + DI.AvailableFreeSpace + " Bytes";
+                SpaceInfo = @"Drive C:\" + $"\nTotal size - { DI.TotalSize } Bytes , Free space - { DI.AvailableFreeSpace } Bytes";
             }
             catch (Exception)
             {
@@ -346,7 +346,7 @@ namespace WindowsOptimizationTool.ViewModels
                 Thread.Sleep(100);
                 ProgBarValue = 1;
                 IsEnabled = true;
-                SpaceInfo = @"Drive C:\" + "\nTotal size - " + DI.TotalSize + " Bytes , Free space - " + DI.AvailableFreeSpace + " Bytes";
+                SpaceInfo = @"Drive C:\"+$"\nTotal size - { DI.TotalSize } Bytes , Free space - { DI.AvailableFreeSpace } Bytes";
             }
             catch (Exception)
             {
